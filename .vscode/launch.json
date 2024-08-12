@@ -1,0 +1,59 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug Serwera",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/Build/Server/src/ServerApp", // Ścieżka do binarki serwera
+            "args": ["1234"], // Argumenty linii komend, jeśli są potrzebne
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false, // Ustaw na true, jeśli chcesz, aby konsola była otwarta poza VS Code
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            // "preLaunchTask": "build", // Zależność od zadania budowania, jeśli masz skonfigurowane
+            // "miDebuggerPath": "/usr/bin/gdb", // Ścieżka do GDB
+            // "miDebuggerArgs": "",
+            // "logging": {
+            //     "engineLogging": true
+            // },
+            // "targetArchitecture": "x86_64",
+            // "internalConsoleOptions": "openOnSessionStart"
+        },
+        {
+            "name": "Debug Clienta",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/Build/Client/src/ClientApp", // Ścieżka do binarki serwera
+            "args": ["127.0.0.1","1234"], // Argumenty linii komend, jeśli są potrzebne
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false, // Ustaw na true, jeśli chcesz, aby konsola była otwarta poza VS Code
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            // "preLaunchTask": "build", // Zależność od zadania budowania, jeśli masz skonfigurowane
+            // "miDebuggerPath": "/usr/bin/gdb", // Ścieżka do GDB
+            // "miDebuggerArgs": "",
+            // "logging": {
+            //     "engineLogging": true
+            // },
+            // "targetArchitecture": "x86_64",
+            // "internalConsoleOptions": "openOnSessionStart"
+        }
+    ]
+}
